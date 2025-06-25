@@ -46,6 +46,47 @@ export default function Home() {
           ref={(el) => (sectionsRef.current[0] = el)}
           className="min-h-screen flex flex-col justify-center items-center relative"
         >
+          {/* Green Glow Effect */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[75vw] h-96 bg-green-400/20 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute -top-20 left-1/4 w-[50vw] h-64 bg-green-500/10 rounded-full blur-2xl"></div>
+            <div className="absolute -top-32 right-1/4 w-[60vw] h-80 bg-emerald-400/15 rounded-full blur-3xl"></div>
+            <div className="absolute -top-16 left-1/6 w-[40vw] h-48 bg-green-300/8 rounded-full blur-2xl"></div>
+
+            {/* Animated floating particles - spread across wider area */}
+            <div
+              className="absolute top-20 left-[15%] w-2 h-2 bg-green-400/60 rounded-full animate-bounce"
+              style={{ animationDelay: "0s", animationDuration: "3s" }}
+            ></div>
+            <div
+              className="absolute top-32 right-[15%] w-1 h-1 bg-green-300/80 rounded-full animate-bounce"
+              style={{ animationDelay: "1s", animationDuration: "4s" }}
+            ></div>
+            <div
+              className="absolute top-16 left-[70%] w-1.5 h-1.5 bg-emerald-400/70 rounded-full animate-bounce"
+              style={{ animationDelay: "2s", animationDuration: "5s" }}
+            ></div>
+            <div
+              className="absolute top-40 left-[10%] w-1 h-1 bg-green-500/60 rounded-full animate-bounce"
+              style={{ animationDelay: "0.5s", animationDuration: "3.5s" }}
+            ></div>
+            <div
+              className="absolute top-24 right-[10%] w-2 h-2 bg-green-400/50 rounded-full animate-bounce"
+              style={{ animationDelay: "1.5s", animationDuration: "4.5s" }}
+            ></div>
+            <div
+              className="absolute top-28 left-[85%] w-1 h-1 bg-emerald-300/70 rounded-full animate-bounce"
+              style={{ animationDelay: "2.5s", animationDuration: "4s" }}
+            ></div>
+            <div
+              className="absolute top-36 left-[5%] w-1.5 h-1.5 bg-green-500/50 rounded-full animate-bounce"
+              style={{ animationDelay: "1.2s", animationDuration: "3.8s" }}
+            ></div>
+          </div>
+
+          {/* Subtle gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-green-900/5 via-transparent to-transparent"></div>
+
           {/* Background Grid */}
           <div className="absolute inset-0 opacity-10">
             <div className="grid grid-cols-12 gap-4 h-full p-8">
