@@ -168,16 +168,20 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Animated Element */}
+            {/* Profile Image */}
             <div className="relative">
-              <div className="w-full h-96 border border-green-400/30 relative overflow-hidden">
-                <div
-                  className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-transparent"
-                  style={{
-                    transform: `translateY(${scrollY * 0.1}px)`,
-                  }}
-                ></div>
-                <div className="absolute bottom-4 right-4 font-mono text-xs text-green-400">[CREATIVE_VISION]</div>
+              <div className="relative overflow-hidden border border-green-400/30">
+                <img
+                  src="/images/portfoliofoto.png"
+                  alt="Sem - Creative Developer"
+                  className="w-full h-96 object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                <div className="absolute bottom-4 right-4 font-mono text-xs text-green-400 bg-black/50 px-2 py-1">
+                  [CREATIVE_DEVELOPER]
+                </div>
+                {/* Subtle green glow overlay */}
+                <div className="absolute inset-0 bg-green-400/5 mix-blend-overlay"></div>
               </div>
             </div>
           </div>
