@@ -102,12 +102,12 @@ export default function Home() {
               </h2>
               <div className="space-y-6 text-white/80 leading-relaxed">
                 <p className="text-lg">
-                  Creative developer met passie voor <span className="text-green-400">futuristisch design</span> en
-                  interactieve ervaringen. Gespecialiseerd in moderne web technologieën.
+                  Beginnende developer met passie voor <span className="text-green-400">creatieve technologie</span> en
+                  interactieve ervaringen. Momenteel bezig met mijn studie ICT Studio richting Media aan Fontys.
                 </p>
                 <p>
-                  Ik combineer technische skills met creatieve visie om unieke digitale ervaringen te creëren die zowel
-                  functioneel als visueel indrukwekkend zijn.
+                  Ik leer elke dag bij en experimenteer graag met nieuwe technologieën om unieke digitale ervaringen te
+                  creëren.
                 </p>
               </div>
 
@@ -115,16 +115,14 @@ export default function Home() {
               <div className="mt-12">
                 <h3 className="font-mono text-green-400 mb-4">SKILLS</h3>
                 <div className="grid grid-cols-2 gap-4">
-                  {["React/Next.js", "JavaScript", "CSS/Tailwind", "Node.js", "UI/UX Design", "Motion Design"].map(
-                    (skill) => (
-                      <div
-                        key={skill}
-                        className="font-mono text-sm text-white/60 hover:text-white transition-colors cursor-pointer"
-                      >
-                        → {skill}
-                      </div>
-                    ),
-                  )}
+                  {["React/Next.js", "JavaScript", "CSS/Tailwind", "Node.js", "UI/UX Design"].map((skill) => (
+                    <div
+                      key={skill}
+                      className="font-mono text-sm text-white/60 hover:text-green-400 hover:scale-105 transition-all duration-300 cursor-default"
+                    >
+                      → {skill}
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -207,8 +205,7 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               <div>
                 <p className="text-xl text-white/80 mb-8">
-                  Klaar voor een samenwerking? Laten we iets <span className="text-green-400">futuristisch</span>{" "}
-                  bouwen.
+                  Interesse in samenwerken of gewoon een praatje? Laten we contact maken!
                 </p>
 
                 <div className="space-y-6">
@@ -240,11 +237,11 @@ export default function Home() {
 
               <div className="border border-white/20 p-8">
                 <div className="font-mono text-xs text-green-400 mb-4">[STATUS]</div>
-                <div className="text-white mb-4">Available for freelance work</div>
+                <div className="text-white mb-4">Momenteel niet beschikbaar</div>
                 <div className="text-white/40 text-sm">
-                  Currently based in Netherlands
+                  Bezig met studie aan Fontys
                   <br />
-                  Open to remote opportunities
+                  Focus op leren en ontwikkelen
                 </div>
               </div>
             </div>
