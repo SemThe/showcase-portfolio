@@ -7,8 +7,16 @@ export default function CustomCursor() {
   const [isHovering, setIsHovering] = useState(false)
 
   useEffect(() => {
+    let animationId
+
     const updatePosition = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY })
+      if (animationId) {
+        cancelAnimationFrame(animationId)
+      }
+
+      animationId = requestAnimationFrame(() => {
+        setPosition({ x: e.clientX, y: e.clientY })
+      })
     }
 
     const handleMouseEnter = () => setIsHovering(true)
@@ -24,6 +32,9 @@ export default function CustomCursor() {
     })
 
     return () => {
+      if (animationId) {
+        cancelAnimationFrame(animationId)
+      }
       window.removeEventListener("mousemove", updatePosition)
       interactiveElements.forEach((el) => {
         el.removeEventListener("mouseenter", handleMouseEnter)
@@ -34,11 +45,11 @@ export default function CustomCursor() {
 
   return (
     <div
-      className={`fixed top-0 left-0 pointer-events-none z-50 transition-all duration-200 ${
+      className={`fixed top-0 left-0 pointer-events-none z-50 transition-transform duration-75 ease-out ${
         isHovering ? "scale-150" : "scale-100"
       }`}
       style={{
-        transform: `translate(${position.x - 10}px, ${position.y - 10}px)`,
+        transform: `translate3d(${position.x - 10}px, ${position.y - 10}px, 0)`,
       }}
     >
       <div className="w-5 h-5 border border-green-400 rounded-full bg-green-400/20"></div>
