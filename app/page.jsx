@@ -263,11 +263,11 @@ export default function Home() {
 
                 <div className="space-y-6">
                   <a
-                    href="mailto:contact@semthe.dev"
+                    href="mailto:semthe.03@icloud.com"
                     className="flex items-center space-x-4 text-white/60 hover:text-green-400 transition-colors group"
                   >
                     <Mail className="w-5 h-5" />
-                    <span className="font-mono">contact@semthe.dev</span>
+                    <span className="font-mono">semthe.03@icloud.com</span>
                   </a>
 
                   <a
