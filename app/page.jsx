@@ -195,40 +195,48 @@ export default function Home() {
             </h2>
 
             <div className="space-y-16">
-              {/* Project 1 */}
+              {/* Project 1 - KNMI Website */}
               <div className="group cursor-pointer">
-                <div className="border border-white/20 p-8 hover:border-green-400/50 transition-all duration-300">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-bold group-hover:text-green-400 transition-colors">PROJECT_001</h3>
-                    <ExternalLink className="w-5 h-5 text-white/40 group-hover:text-green-400 transition-colors" />
+                <a href="https://github.com/lucasBFontys/knmi-opdracht" target="_blank" rel="noopener noreferrer">
+                  <div className="border border-white/20 p-8 hover:border-green-400/50 transition-all duration-300">
+                    <div className="flex justify-between items-start mb-4">
+                      <h3 className="text-2xl font-bold group-hover:text-green-400 transition-colors">
+                        KNMI_WEBSITE_001
+                      </h3>
+                      <ExternalLink className="w-5 h-5 text-white/40 group-hover:text-green-400 transition-colors" />
+                    </div>
+                    <p className="text-white/60 mb-4">
+                      Promotie website voor de open-source KNMI weather app. Interactieve en informatieve pagina's om
+                      gebruikers te informeren over de voordelen van de app en downloads te verhogen.
+                    </p>
+                    <div className="flex space-x-4 font-mono text-xs text-green-400">
+                      <span>NEXT.JS</span>
+                      <span>REACT</span>
+                      <span>JAVASCRIPT</span>
+                    </div>
                   </div>
-                  <p className="text-white/60 mb-4">
-                    Futuristische portfolio website met interactieve elementen en moderne animaties.
-                  </p>
-                  <div className="flex space-x-4 font-mono text-xs text-green-400">
-                    <span>REACT</span>
-                    <span>NEXT.JS</span>
-                    <span>TAILWIND</span>
-                  </div>
-                </div>
+                </a>
               </div>
 
-              {/* Project 2 */}
+              {/* Project 2 - DJ Leont */}
               <div className="group cursor-pointer">
-                <div className="border border-white/20 p-8 hover:border-green-400/50 transition-all duration-300">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-bold group-hover:text-green-400 transition-colors">PROJECT_002</h3>
-                    <ExternalLink className="w-5 h-5 text-white/40 group-hover:text-green-400 transition-colors" />
+                <a href="https://github.com/SemThe/djleont" target="_blank" rel="noopener noreferrer">
+                  <div className="border border-white/20 p-8 hover:border-green-400/50 transition-all duration-300">
+                    <div className="flex justify-between items-start mb-4">
+                      <h3 className="text-2xl font-bold group-hover:text-green-400 transition-colors">DJ_LEONT_002</h3>
+                      <ExternalLink className="w-5 h-5 text-white/40 group-hover:text-green-400 transition-colors" />
+                    </div>
+                    <p className="text-white/60 mb-4">
+                      Professionele DJ portfolio website met moderne interface, event showcase en booking
+                      functionaliteiten. Focus op visuele presentatie en gebruikerservaring.
+                    </p>
+                    <div className="flex space-x-4 font-mono text-xs text-green-400">
+                      <span>HTML</span>
+                      <span>CSS</span>
+                      <span>JAVASCRIPT</span>
+                    </div>
                   </div>
-                  <p className="text-white/60 mb-4">
-                    Interactieve web applicatie met focus op gebruikerservaring en moderne interface.
-                  </p>
-                  <div className="flex space-x-4 font-mono text-xs text-green-400">
-                    <span>JAVASCRIPT</span>
-                    <span>CSS</span>
-                    <span>UI/UX</span>
-                  </div>
-                </div>
+                </a>
               </div>
 
               {/* Coming Soon */}

@@ -107,7 +107,7 @@ This is a personal portfolio project. However, suggestions and feedback are welc
 This project is licensed under the ISC License.
 
 ## Contact
-- **Email**: semthe.03@icloud.com
+- **Email**: contact@semthe.dev
 - **GitHub**: [github.com/semthe](https://github.com/semthe)
 - **LinkedIn**: [linkedin.com/in/semthe](https://linkedin.com/in/semthe)
 
