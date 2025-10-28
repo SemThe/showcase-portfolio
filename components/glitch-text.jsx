@@ -1,11 +1,18 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export default function GlitchText({ text, className }) {
   const canvasRef = useRef(null)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (!mounted) return
+
     const canvas = canvasRef.current
     if (!canvas) return
 
@@ -49,7 +56,7 @@ export default function GlitchText({ text, className }) {
       const sliceHeight = fontSize / sliceCount
 
       for (let i = 0; i < sliceCount; i++) {
-        if (Math.random() > 0.85) {
+        if (Math.random() > 0.7) {
           const sliceY = y - fontSize / 2 + i * sliceHeight
           const offsetX = (Math.random() - 0.5) * 15
 
@@ -65,8 +72,7 @@ export default function GlitchText({ text, className }) {
         }
       }
 
-      // Green glitch
-      if (Math.random() > 0.8) {
+      if (Math.random() > 0.6) {
         ctx.save()
         ctx.globalCompositeOperation = "screen"
         ctx.fillStyle = "#22c55e"
@@ -74,8 +80,7 @@ export default function GlitchText({ text, className }) {
         ctx.restore()
       }
 
-      // Red glitch
-      if (Math.random() > 0.8) {
+      if (Math.random() > 0.6) {
         ctx.save()
         ctx.globalCompositeOperation = "screen"
         ctx.fillStyle = "#ef4444"
@@ -84,12 +89,15 @@ export default function GlitchText({ text, className }) {
       }
     }
 
-    updateCanvasSize()
+    setTimeout(() => {
+      updateCanvasSize()
+    }, 100)
+
     window.addEventListener("resize", updateCanvasSize)
 
     let animationId
     const animate = () => {
-      if (Math.random() > 0.8) {
+      if (Math.random() > 0.5) {
         drawGlitchText()
       }
       animationId = requestAnimationFrame(animate)
@@ -99,9 +107,11 @@ export default function GlitchText({ text, className }) {
 
     return () => {
       window.removeEventListener("resize", updateCanvasSize)
-      cancelAnimationFrame(animationId)
+      if (animationId) {
+        cancelAnimationFrame(animationId)
+      }
     }
-  }, [text])
+  }, [text, mounted])
 
   return (
     <div className={className}>
