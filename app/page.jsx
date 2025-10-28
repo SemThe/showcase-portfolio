@@ -166,6 +166,19 @@ export default function Home() {
                   ))}
                 </div>
               </div>
+
+              {/* Ambities */}
+              <div className="mt-12">
+                <h3 className="font-mono text-green-400 mb-4">AMBITIES</h3>
+                <div className="space-y-3">
+                  <div className="font-mono text-sm text-white/60 hover:text-green-400 hover:scale-105 transition-all duration-300 cursor-default">
+                    → Geavanceerde animaties & motion design
+                  </div>
+                  <div className="font-mono text-sm text-white/60 hover:text-green-400 hover:scale-105 transition-all duration-300 cursor-default">
+                    → AI-integratie & machine learning toepassingen
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Profile Image */}
