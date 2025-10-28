@@ -17,7 +17,7 @@ export default function GlitchText({ text, className }) {
       if (!container) return
 
       canvas.width = container.clientWidth
-      canvas.height = Math.min(container.clientWidth * 0.3, 400)
+      canvas.height = Math.min(container.clientWidth * 0.4, 500)
 
       drawGlitchText()
     }
@@ -27,7 +27,7 @@ export default function GlitchText({ text, className }) {
 
       ctx.clearRect(0, 0, canvas.width, canvas.height)
 
-      const fontSize = Math.min(canvas.width * 0.15, 200)
+      const fontSize = Math.min(canvas.width * 0.2, 280)
       ctx.font = `bold ${fontSize}px Arial, sans-serif`
       ctx.textBaseline = "middle"
 
