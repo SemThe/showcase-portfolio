@@ -152,30 +152,32 @@ export default function Home() {
                 </p>
               </div>
 
-              {/* Skills */}
-              <div className="mt-12">
-                <h3 className="font-mono text-green-400 mb-4">SKILLS</h3>
-                <div className="grid grid-cols-2 gap-4">
-                  {["React/Next.js", "JavaScript", "CSS/Tailwind", "Node.js", "UI/UX Design"].map((skill) => (
-                    <div
-                      key={skill}
-                      className="font-mono text-sm text-white/60 hover:text-green-400 hover:scale-105 transition-all duration-300 cursor-default"
-                    >
-                      → {skill}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Ambities */}
-              <div className="mt-12">
-                <h3 className="font-mono text-green-400 mb-4">AMBITIES</h3>
-                <div className="space-y-3">
-                  <div className="font-mono text-sm text-white/60 hover:text-green-400 hover:scale-105 transition-all duration-300 cursor-default">
-                    → Geavanceerde animaties & motion design
+              <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* Skills */}
+                <div>
+                  <h3 className="font-mono text-green-400 mb-4">SKILLS</h3>
+                  <div className="grid grid-cols-1 gap-4">
+                    {["React/Next.js", "JavaScript", "CSS/Tailwind", "Node.js", "UI/UX Design"].map((skill) => (
+                      <div
+                        key={skill}
+                        className="font-mono text-sm text-white/60 hover:text-green-400 hover:scale-105 transition-all duration-300 cursor-default"
+                      >
+                        → {skill}
+                      </div>
+                    ))}
                   </div>
-                  <div className="font-mono text-sm text-white/60 hover:text-green-400 hover:scale-105 transition-all duration-300 cursor-default">
-                    → AI-integratie & machine learning toepassingen
+                </div>
+
+                {/* Ambities */}
+                <div>
+                  <h3 className="font-mono text-green-400 mb-4">AMBITIES</h3>
+                  <div className="space-y-3">
+                    <div className="font-mono text-sm text-white/60 hover:text-green-400 hover:scale-105 transition-all duration-300 cursor-default">
+                      → Geavanceerde animaties & motion design
+                    </div>
+                    <div className="font-mono text-sm text-white/60 hover:text-green-400 hover:scale-105 transition-all duration-300 cursor-default">
+                      → AI-integratie & machine learning toepassingen
+                    </div>
                   </div>
                 </div>
               </div>
